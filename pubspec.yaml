@@ -4,5 +4,5 @@ version: 0.0.1
 author: Biswajit Mondal <biswajitmandal2807@gmail.com>
 
 dependencies:
-  question_asker_bm: 0.0.1
+  question_asker_bm: 0.0.2
   image: 2.0.6
