@@ -3,18 +3,18 @@ import 'dart:io';
 import 'package:image_converter/src/converter.dart';
 
 void main() {
-  final promter = new Promter();
-  final choice = promter.askBinary('Are you here to convert an image?');
+  final asker = new Asker();
+  final choice = asker.askBinary('Are you here to convert an image?');
   if (!choice) {
     exit(0);
   } 
 
-  final format = promter.askMultiple('Select a format of image to convert to: ', buildFormatOption());
-  final selectedFile = promter.askMultiple('Select an Image to convert: ', buildFormatFiles());
+  final format = asker.askMultiple('Select a format of image to convert to: ', buildFormatOption());
+  final selectedFile = asker.askMultiple('Select an Image to convert: ', buildFormatFiles());
 
   String newPath = convertImage(selectedFile, format);
-  print(newPath);
-  final shouldOpenImage = promter.askBinary('Do you want to Open the Image? ');
+
+  final shouldOpenImage = asker.askBinary('Do you want to Open the Image? ');
   openNewImage(newPath, shouldOpenImage);
 }
 
