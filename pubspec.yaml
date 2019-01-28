@@ -1,0 +1,8 @@
+name: image_converter
+description: A CLI tool for converting an image from one format to another format
+version: 0.0.1
+author: Biswajit Mondal <biswajitmandal2807@gmail.com>
+
+dependencies:
+  question_asker_bm: 0.0.1
+  image: 2.0.6
